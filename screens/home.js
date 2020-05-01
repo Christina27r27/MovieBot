@@ -110,6 +110,9 @@ const Home = () => {
                 <TouchableOpacity style={styles.playIconContainer}>
                     <FontAwesome5 name='play' size={22} color='#02ad94' style={{marginLeft: 4}} />
                 </TouchableOpacity>
+            </View>
+            <View style={{paddingHorizontal: 14, marginTop: 14}}>
+                <Text style={{color:'white', opacity: 0.8, lineHeight: 20}}>{background.desc}</Text>   
             </View>   
             </ImageBackground>
         </View>
@@ -207,6 +210,17 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       fontSize: 14,
       opacity: 0.8
+  },
+  playIconContainer: {
+      backgroundColor: '#212121',
+      padding: 18,
+      borderRadius: 40,
+      justifyContent: 'center',
+      alignItems: 'center',
+      elevation: 10,
+      borderWidth: 4,
+      borderColor: 'rgba(2,173,148,0.2)',
+      marginBottom: 14
   }
 });
 
