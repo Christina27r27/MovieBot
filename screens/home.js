@@ -100,6 +100,16 @@ const Home = () => {
                 ref={carouselRef}
                 inActiveOpacity={0.4}
                 />
+            </View>
+
+            <View style={styles.movieInfoContainer}>
+                <View style={{justifyContent: 'center'}}>
+                    <Text style={styles.movieName}>{background.name}</Text>
+                    <Text style={styles.movieStat}>{background.stat}</Text>
+                </View>
+                <TouchableOpacity style={styles.playIconContainer}>
+                    <FontAwesome5 name='play' size={22} color='#02ad94' style={{marginLeft: 4}} />
+                </TouchableOpacity>
             </View>   
             </ImageBackground>
         </View>
@@ -177,6 +187,26 @@ const styles = StyleSheet.create({
       top: 15,
       right: 15
 
+  },
+  movieInfoContainer: {
+      flexDirection: 'row',
+      marginTop: 16,
+      justifyContent: 'space-between',
+      width: Dimensions.get('window').width - 14
+  },
+  movieName: {
+      paddingLeft: 14,
+      color: 'white',
+      fontWeight: 'bold',
+      fontSize: 20,
+      marginBottom: 6
+  },
+  movieStat: {
+      paddingLeft: 14,
+      color: 'white',
+      fontWeight: 'bold',
+      fontSize: 14,
+      opacity: 0.8
   }
 });
 
